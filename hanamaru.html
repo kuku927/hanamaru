@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪月華</title>
+
+
+    <style>
+        /* 改變navbar顏色 */
+        .bg-navbar-color {
+            background-color: #FFDFE5 !important;
+        }
+
+        .navbar {
+            position: fixed;
+            /* 将导航栏设置为固定定位 */
+            top: 0;
+            /* 将导航栏顶部与页面顶部对齐 */
+            width: 100%;
+            /* 设置导航栏宽度为100% */
+            z-index: 1000;
+            /* 设置导航栏的层级，确保其在其他内容上方 */
+        }
+
+        /* 把圖片設成背景 */
+        body {
+            background-image: url('https://images.plurk.com/6EMZyCaiXsAPqyjYVqbwnU.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            /* 使背景铺满整个视口高度 */
+            margin: 0;
+            /* 去除默认的页面边距 */
+            padding: 0;
+            /* 去除默认的页面填充 */
+        }
+
+        /* 改手風琴樣式 */
+        .accordion-flush {
+            background-color: rgba(255, 255, 255, 0.6);
+            /* 设置手风琴容器背景透明 */
+        }
+
+        .accordion-item {
+            background-color: transparent !important;
+            /* 设置手风琴项背景透明 */
+            border: none;
+            /* 去除边框 */
+        }
+
+        .accordion-button {
+            background-color: transparent !important;
+            /* 设置手风琴按钮背景透明 */
+            color: #000 !important;
+            /* 调整按钮文字颜色 */
+        }
+
+        .accordion-button:focus {
+            box-shadow: none !important;
+            /* 去除按钮聚焦时的阴影效果 */
+        }
+
+        /* 使用 CSS 设置文本的颜色和大小 (とある)*/
+        .toaru-text {
+            color: #FF5B8A;
+            /* 设置文本颜色为 #FF5B8A */
+            font-size: 30px;
+            /* 设置文本大小为 50px */
+            font-weight: bold;
+            /* 设置文本为粗体 */
+        }
+
+        .resized-image {
+            width: 240px;
+            /* 将图像宽度设置为原始宽度的50% */
+            height: auto;
+            /* 自动计算高度，以保持图像宽高比 */
+        }
+
+
+        body {
+            cursor: url('https://emos.plurk.com/737c4a43db7b9f6685325ac315002ddc_w48_h48.png'), auto;
+        }
+
+        .custom-cursor {
+            cursor: url('https://emos.plurk.com/737c4a43db7b9f6685325ac315002ddc_w48_h48.png'), pointer;
+        }
+
+        .custom-cursor:active {
+            cursor: url('https://emos.plurk.com/737c4a43db7b9f6685325ac315002ddc_w48_h48.png'), pointer;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <!-- navbar -->
+    <nav class="d-flex navbar bg-navbar-color">
+        <div class="container justify-content-center">
+            <a class="navbar-brand " href="#">
+                <img src="https://images.plurk.com/5PMwYwYiR7fXJ23VWP15cK.png" alt="" height="45">
+            </a>
+        </div>
+    </nav>
+
+    <!-- とある本丸 -->
+    <div class="d-flex m-2 mt-4 toaru-text align-content-center justify-content-center user-select-none">
+        とある本丸の とある刀剣男士たちによる 花丸な日々の物語でした。
+    </div>
+
+
+    <!--手風琴 -->
+    <div class="container mt-4 user-select-none">
+        <div class="accordion accordion-flush  " id="accordionFlushExample">
+            <!-- 第一個 什麼是「刀剣乱舞」？-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <b>什麼是「刀剣乱舞」？</b>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body ms-4">
+                        <b>公元2205年，</b>「歷史修正主義者」為了篡改歷史，開始攻擊過去的時代。<br>
+                        「時之政府」將擁有喚醒沉睡刀劍力量的「審神者（さにわ）」<br>
+                        和從刀劍中誕生的付喪神<b>「刀劍男士（とうけんだんし）」</b>送往各個時代展開戰鬥。<br>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二個 什麼是「刀剣男士」？-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <b>什麼是「刀剣男士」？</b>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body ms-4">
+                        刀劍的付喪神經審神者的能力被喚醒而顯現的存在。<br>
+                        以日本刀爲中心的他們不僅作爲武器，作爲美術品的價值也得到了很高的評價。<br>
+                    </div>
+                </div>
+            </div>
+            <!-- 第三個 花丸？雪月華？-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <b>「花丸」？「雪月華」？</b>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body ms-4">時為公元二二〇五年。<br>
+                        是以改變歷史為目的的「歷史修正主義者」開始對過去實施攻擊的時代。<br>
+                        被賦予了守護歷史這一使命的「審神者」，由他們所喚起的最強付喪神「刀劍男士」。<br>
+                        這是，他們以「某個本丸」為舞台，一心一意、開朗明快地生活的「花丸」日常物語。<br><br>
+                        <div class="d-flex flex-row">
+                            <div class="m-4">
+                                刀剣乱舞-花丸-
+                                <img src="https://images.plurk.com/2o9EjhW7EhPkNdsx0dZpIv.png" alt=""
+                                    height="50px"><br><br>
+                                <img src="https://images.plurk.com/4NzBNCErKG7w8Gsbyzhrwg.png" alt="" height="300px">
+                            </div>
+
+                            <div class="m-4">
+                                続刀剣乱舞-花丸-
+                                <img src="https://images.plurk.com/1qlLetsxkgsh9gUkW6wjAN.png" alt=""
+                                    height="50px"><br><br>
+                                <img src="https://images.plurk.com/BCIodCwiwa3u9TZTqqhvb.png" alt="" height="300px">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 介紹 -->
+    <div class="m-5 user-select-none">
+        <!-- 雪之卷 -->
+        <div class="m-5">
+            <p class="toaru-text">雪之卷</p>
+            <div class="d-flex flex-row m-3 align-items-center">
+                <img src="https://images.plurk.com/2irzWruW5eYcT8AcKj591Z.png" class="resized-image" alt="...">
+                <b class="ms-5">
+                    有著大棵萬葉櫻的本丸，正處於白雪覆蓋之際──。<br><br>
+                    刀劍男士大和守安定和加州清光聊起往事。<br>
+                    當時有把刀接到時之政府的指令，被派遣到他們這個本丸，自稱為名刀山姥切的本歌，名叫「山姥切長義」。<br>
+                    山姥切長義對自己的仿作「山姥切國廣」擺出挑釁的態度，山姥切國廣對他的想法也很複雜。<br>
+                    加州清光察覺他們倆的心結，一心想要幫助夥伴；大和守安定看出加州清光的堅強意志，於是向他提出一個建議。<br><br>
+                    另一方面，本丸突然接到來電，這次的特命是去調查「歷史被改變，被放棄的世界」。<br>
+                    出陣的目的地是幕府末期，文久三年的土佐。<br>
+                    身為坂本龍馬佩刀的陸奧守吉行擔任隊長，五名刀劍男士動身前往歷史被改變的土佐。<br>
+                    然而那處的街道景象，和陸奧守吉行所知道的土佐完全不同。<br>
+                    一夥人和先行前往調查的肥前忠廣和南海太郎朝尊會合，然後四處奔走，討伐改變歷史的主謀。
+                </b>
+            </div>
+        </div>
+
+        <!-- 月之卷 -->
+        <div class="m-5">
+            <p class="toaru-text">月之卷</p>
+            <div class="d-flex flex-row m-3 align-items-center">
+                <img src="https://images.plurk.com/HOrfqf6OUgksbwRTIRXfR.png" class="resized-image" alt="...">
+                <b class="ms-5">
+                    某個本丸，迎接夏日的到來。<br><br>
+                    增加了新的刀劍男士，日子變得更加熱鬧之際，審神者向他們下達了新的指令。那就是「放假三天」！<br>
+                    刀劍男士們感念於審神者用心的安排，他們決定拍下在假期中的樣子，整理成紀念相簿作為回禮。<br>
+                    上山？下海？……刀劍男士們想了好多在假期中想做的事。<br><br>
+                    此時，大和守安定也想做一本相簿送給外出修行中的加州清光，他四處探望大家的假期，盡可能拍下所有夥伴的身影。<br>
+                    沒有花季就在樹下賞葉飲酒，用木材創作各種手工藝，刀劍男士盡情享受山林之趣。<br>
+                    大和守安定將這些全都用相片記錄下來，然後髭切邀請他一起去打鬼。<br><br>
+                    隔天，大和守安定到了海邊赴約。刀劍男士在此更是徜徉於只有海邊能玩的遊戲和海味佳餚。<br>
+                    第一次過暑假，難忘的回憶一個個刻在心頭──。<br>
+                </b>
+            </div>
+        </div>
+
+        <!-- 華之卷 -->
+        <div class="m-5">
+            <p class="toaru-text">華之卷</p>
+            <div class="d-flex flex-row m-3 align-items-center">
+                <img src="https://images.plurk.com/40Tj6lpmAzAtm9qGaiGaNN.png" class="resized-image" alt="...">
+                <b class="ms-5">
+                    某一天，審神者突然昏倒了───。<br>
+                    無論刀劍男士們多麼擔心，審神者始終沒有醒來的跡象。<br><br>
+                    然而，時空轉移裝置因為審神者不省人事而無法運轉，有三個遠征中的部隊因此無法回來。<br>
+                    他們無法向本丸取得聯繫，也不知道何時能歸來，因此這18把刀劍男士被迫暫時分別滯留在平安時代、戰國時代與江戶時代。<br>
+                    這時本丸這邊發現審神者昏倒的原因，來自之前去別的時代出陣的部隊帶回來的玉鋼。<br>
+                    可是大家依然不知道該如何喚醒審神者的意識。<br><br>
+                    在陷入僵局之際，身為本丸創始刀之一的加州清光從狐之助那邊聽說，想讓審神者醒來就必須去“夢”的世界解放審神者的心。<br>
+                    所以加州清光和他的搭檔大和守安定，一同出陣前往未知的世界。<br>
+                </b>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- 登場的刀 -->
+    <p class="toaru-text m-5 user-select-none">在雪月華中登場的部份刀劍男士</p>
+
+    <div class="d-flex justify-content-center user-select-none">
+        <!--清光 -->
+        <!-- Button trigger modal -->
+        <img src="https://images.plurk.com/1n7Xio8cqksb88o7Ms1lgq.png" class="btn resized-image " data-bs-toggle="modal"
+            data-bs-target="#exampleModal1">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-body d-flex flex-row">
+                    <img src="https://images.plurk.com/1n7Xio8cqksb88o7Ms1lgq.png" alt="" height="300">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 安定 -->
+        <img src="https://images.plurk.com/5MZSlXYj8RXjDkGvp5tjgt.png" class="btn resized-image " data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-body d-flex flex-row">
+                    <img src="https://images.plurk.com/5MZSlXYj8RXjDkGvp5tjgt.png" alt="" height="300">
+                </div>
+            </div>
+        </div>
+
+
+        <!--山姥切國廣 -->
+        <img src="https://images.plurk.com/5dekfngx6vSRW2plhkrgn9.png" class="btn" width="275" data-bs-toggle="modal"
+            data-bs-target="#exampleModal3">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-body d-flex flex-row">
+                    <img src="https://images.plurk.com/5dekfngx6vSRW2plhkrgn9.png" alt="" height="300">
+                </div>
+            </div>
+        </div>
+
+        <!-- 山姥切長義 -->
+        <img src="https://images.plurk.com/MKw1X2gBjRobk1xeiCe0l.png" class="btn resized-image " data-bs-toggle="modal"
+            data-bs-target="#exampleModal4">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-body d-flex flex-row">
+                    <img src="https://images.plurk.com/MKw1X2gBjRobk1xeiCe0l.png" alt="" height="300">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- 影片 -->
+    <br><br><br>
+    <div class="container align-items-center mt-5 ">
+        <iframe width="360" height="220.5" src="https://www.youtube.com/embed/KUZR4g4SVwY?si=Mqy0bAqhCaA3olAu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="360" height="220.5" src="https://www.youtube.com/embed/smrbIKFlQAw?si=_-ER7rE7ltGgKN9z"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="360" height="220.5" src="https://www.youtube.com/embed/8_KzRorUkl8?si=PFyxwVEHVOKzFZM0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
